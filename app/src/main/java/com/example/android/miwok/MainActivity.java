@@ -18,6 +18,8 @@ package com.example.android.miwok;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -32,40 +34,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Set the content of the activity to use the activity_main.xml layout file
-        setContentView(R.layout.activity_main);
-
-
-        TextView numbers = (TextView)findViewById(R.id.numbers);
-        numbers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,NumberActivity.class);
-                startActivity(intent);
-            }
-        });
-        TextView family = (TextView)findViewById(R.id.family);
-        family.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1 = new Intent(MainActivity.this,FamilyActivity.class);
-                startActivity(intent1);
-            }
-        });
-        TextView colors = (TextView)findViewById(R.id.colors);
-        colors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent2 = new Intent(MainActivity.this,ColorsActivity.class);
-                startActivity(intent2);
-            }
-        });
-        TextView pharses = (TextView)findViewById(R.id.phrases);
-        pharses.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent3 = new Intent(MainActivity.this,PhrasesActivity.class);
-                startActivity(intent3);
-            }
-        });
+        setContentView(R.layout.activity_categeory);
+        ViewPager viewPager =(ViewPager)findViewById(R.id.pager);
+        SimpleFragmentPageAdaptor simpleFragmentPageAdaptor = new SimpleFragmentPageAdaptor(getSupportFragmentManager());
+        viewPager.setAdapter(simpleFragmentPageAdaptor);
+        TabLayout tabLayout = (TabLayout)findViewById(R.id.tab);
+        tabLayout.setupWithViewPager(viewPager);
     }
 }

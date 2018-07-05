@@ -11,19 +11,9 @@ public class PhrasesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phrases);
-        ArrayList<words> listviewobj = new ArrayList<words>();
-        listviewobj.add(new words("okkathi","one"));
-        listviewobj.add(new words("okkathi","one"));
-        listviewobj.add(new words("okkathi","one"));
-        listviewobj.add(new words("okkathi","one"));
-        listviewobj.add(new words("okkathi","one"));
-        listviewobj.add(new words("okkathi","one"));
-        listviewobj.add(new words("okkathi","one"));
-        listviewobj.add(new words("okkathi","one"));
-
-        costomAdaptor itemadapter = new costomAdaptor(this,listviewobj, R.color.category_phrases);
-        ListView listView = (ListView)findViewById(R.id.rootview);
-        listView.setAdapter(itemadapter);
+        setContentView(R.layout.activity_categeory);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container,new PharsesFragment())
+                .commit();
     }
 }
