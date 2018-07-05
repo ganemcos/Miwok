@@ -48,14 +48,14 @@ public class NumberActivity extends AppCompatActivity {
         setContentView(R.layout.activity_number);
         audioManager  = (AudioManager)getSystemService(AUDIO_SERVICE);
         final ArrayList<words> listviewobj = new ArrayList<words>();
-        listviewobj.add(new words("okkathi","one", R.drawable.number_one,R.raw.number_one));
-        listviewobj.add(new words("okkathi","one",R.drawable.number_two,R.raw.number_two));
-        listviewobj.add(new words("okkathi","one",R.drawable.number_three,R.raw.number_three));
-        listviewobj.add(new words("okkathi","one",R.drawable.number_four));
-        listviewobj.add(new words("okkathi","one",R.drawable.number_five));
-        listviewobj.add(new words("okkathi","one",R.drawable.number_six));
-        listviewobj.add(new words("okkathi","one",R.drawable.number_seven));
-        listviewobj.add(new words("okkathi","one",R.drawable.number_eight));
+        listviewobj.add(new words("okkathi","One", R.drawable.number_one,R.raw.number_one));
+        listviewobj.add(new words("Roundu","Two",R.drawable.number_two,R.raw.number_two));
+        listviewobj.add(new words("Muddu","three",R.drawable.number_three,R.raw.number_three));
+        listviewobj.add(new words("Nalugu","four",R.drawable.number_four,R.raw.number_four));
+        listviewobj.add(new words("Idhu","five",R.drawable.number_five,R.raw.number_five));
+        listviewobj.add(new words("Aweru","SiX",R.drawable.number_six,R.raw.number_six));
+        listviewobj.add(new words("Yeadhu","Seven",R.drawable.number_seven,R.raw.number_seven));
+        listviewobj.add(new words("Padhi","ten",R.drawable.number_eight,R.raw.number_ten));
 
         costomAdaptor itemadapter = new costomAdaptor(this,listviewobj,R.color.category_numbers);
         ListView listView = (ListView)findViewById(R.id.rootview);

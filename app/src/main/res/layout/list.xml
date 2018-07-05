@@ -41,17 +41,11 @@
 
         <ImageView
             android:id="@+id/play"
-            android:layout_width="70dp"
+            android:layout_width="31dp"
             android:layout_height="70dp"
             android:layout_weight="1"
             android:src="@drawable/baseline_play_arrow_black_18" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="?android:attr/selectableItemBackground">
-        </View>
-        
 
     </LinearLayout>
 </LinearLayout>
